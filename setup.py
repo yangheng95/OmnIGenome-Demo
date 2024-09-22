@@ -1,0 +1,45 @@
+frompathlibimportPath
+fromsetuptoolsimportsetup,find_packages
+fromomnigenomeimport__name__,__version__
+cwd=Path(__file__).parent
+long_description=(cwd/"README.MD").read_text(encoding="utf8")
+extras={}
+extras["dev"]=[
+"dill",
+"pytest",
+]
+setup(
+name=__name__,
+version=__version__,
+description="OmniGenome: A comprehensive toolkit for genome analysis.",
+long_description=long_description,
+long_description_content_type="text/markdown",
+url=f"https://github.com/yangheng95/{__name__}",
+author="Yang, Heng",
+author_email="hy345@exeter.ac.uk",
+python_requires=">=3.9",
+packages=find_packages(),
+include_package_data=True,
+exclude_package_date={"":[".gitignore"]},
+license="MIT",
+install_requires=[
+"findfile>=2.0.0",
+"autocuda>=0.16",
+"metric-visualizer>=0.9.6",
+"tqdm",
+"termcolor",
+"gitpython",
+"torch>=1.13.1",
+"sentencepiece",
+"protobuf<4.0.0",
+"pandas",
+"viennarna",
+"scikit-learn",
+"accelerate",
+"transformers",
+],
+dependency_links=[
+        "git+https://github.com/yangheng95/transformers@add_omnigenome
+],
+extras_require=extras,
+)
