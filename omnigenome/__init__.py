@@ -96,17 +96,3 @@ __all__ = [
     "download_model",
     "download_pipeline",
 ]
-from termcolor import colored
-LOGO1 = r
-LOGO2 = r
-art_dna_color_map = {
-    '*': 'blue',  
-    '@': 'white',  
-    '-': 'yellow',  
-    '=': 'light_cyan',  
-    '+': 'yellow',  
-    ' ': 'black'  
-}
-import random
-LOGO = random.choice([LOGO1, LOGO2])
-print(LOGO)
